@@ -20,7 +20,7 @@ app.use("/api/tasks", taskRoutes);
 app.use("/api/users", userRoutes);
 
 // MongoDB
-mongoose.connect("mongodb://nurahfthm-grid:nurahfthm-grid@ac-iws3eq7-shard-00-00.1pfprql.mongodb.net:27017,ac-iws3eq7-shard-00-01.1pfprql.mongodb.net:27017,ac-iws3eq7-shard-00-02.1pfprql.mongodb.net:27017/?ssl=true&replicaSet=atlas-2ixbdy-shard-0&authSource=admin&appName=Cluster0")
+mongoose.connect("mongodb://-grid@ac-iws3eq7-shard-00-00.1pfprql.mongodb.net:27017,ac-iws3eq7-shard-00-01.1pfprql.mongodb.net:27017,ac-iws3eq7-shard-00-02.1pfprql.mongodb.net:27017/?ssl=true&replicaSet=atlas-2ixbdy-shard-0&authSource=admin&appName=Cluster0")
 .then(() => {
     console.log("MongoDB Connected");
 
