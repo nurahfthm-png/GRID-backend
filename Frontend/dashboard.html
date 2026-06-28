@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<style>
+
+ .logo-img{
+    letter-spacing: -0.5px;
+    height:60px;
+    width:auto;
+}
+
+.navbar-brand{padding-left:50px;}
+
+.logo{
+    color:#3A86FF;
+}
+
+.nav-link{
+    font-family: Futura Md BT;
+    font-weight:500;
+    font-size: 20px;
+    margin-left:20px;
+}
+
+.button{padding-right: 50px;}
+
+.nav-link:hover{
+    color:#3A86FF;
+}
+
+
+.navbar-nav .nav-item{
+    margin-right: 60px;
+}
+
+.dashboard{
+    display:flex;
+}
+
+
+
+.sidebar{
+    width:220px;
+    min-height:100vh;
+    border-right:1px solid #3A86FF;
+    padding:30px 20px;
+}
+
+.logo img{
+    width:100px;
+    margin-bottom:50px;
+}
+
+.menu{
+    list-style:none;
+    padding:0;
+}
+
+.menu li{
+    margin:25px 0;
+    color:#2B2D42;
+    font-family: Futura Md BT;
+}
+
+.menu i{
+    font-size: 30px;
+    color:#4da3ff;
+    margin-right:15px;
+}
+
+.main-content{
+    flex:1;
+    padding:30px;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.sidebar ul li{
+    list-style:none;
+    margin:20px 0;
+}
+
+.welcome-banner{
+    background-image:url(./Images/Artboard\ 2.png);
+    background-size:cover;
+    background-position:center;
+
+    height:180px;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:50px;
+}
+
+.banner-text h3{
+    color:white;
+    font-family:"Futura Md BT";
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.banner-text p{
+    color:white;
+    font-family:"Futura Md BT";
+    font-size:18px;
+    line-height:1.5;
+}
+
+.stats-row{
+    display:flex;
+    gap:20px;
+    margin-top:25px;
+}
+
+.stat-card{
+    font-family: Futura Md BT;
+    flex:1;
+    background:#2B2D42;
+    border-radius:10px;
+    padding:15px;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+}
+
+.stat-icon{
+    font-size:80px;
+    color:#3A86FF;
+   
+}
+
+.task-card{
+    font-family: Futura Md BT;
+    margin-top:25px;
+    background:#2B2D42;
+    border-radius:10px;
+    padding:20px;
+    color:white;
+}
+
+.task-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.add-task{
+    margin-top:25px;
+    padding-left:5px;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    color:#3A86FF;
+}
+
+.add-task i{
+    font-size:28px;
+    font-weight:300;
+}
+
+.add-task span{
+    font-size:15px;
+}
+
+.task-row{
+    background:linear-gradient(
+    90deg,
+    #3DCAC5,
+   #2B2D42
+    );
+
+    padding:12px 15px;
+    border-radius:6px;
+    margin-bottom:15px;
+
+    display:flex;
+    justify-content:space-between;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.check{
+    width:15px;
+    height:15px;
+    border:1px solid #3A86FF;
+}
+
+.high{
+    background:#CE1414;
+    padding:4px 12px;
+    border-radius:4px;
+}
+
+.medium{
+    background:#CE9314;
+    padding:4px 12px;
+    border-radius:4px;
+}
+
+.low{
+    background:#3A86FF;
+    padding:4px 12px;
+    border-radius:4px;
+}
+
+.grid{
+    margin-top:25px;
+
+    display:grid;
+    grid-template-columns:repeat(5,150px);
+    gap:10px;
+}
+
+.box{
+    width:90px;
+    height:80px;
+    border-radius:10px;
+    border:1px solid #3A86FF;
+}
+
+.completed{
+    background:#3A86FF;
+}
+
+.progress-details{
+    margin-top:25px;
+
+    display:flex;
+    justify-content:space-between;
+
+    color:white;
+}
+
+.custom-progress{
+    height:12px;
+    background:#2B2D42;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+.progress-fill{
+    font-family: Futura Md BT;
+    width:67%;
+    height:100%;
+    background:#3A86FF;
+    border-radius:20px;
+}
+
+.deadline-header{
+    display:flex;
+    justify-content:space-between;
+    color:white;
+    margin-bottom:25px;
+}
+
+.deadline-header a{
+    font-family: Futura Md BT;
+    color:white;
+    text-decoration:none;
+}
+
+.deadline-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.date h2{
+    margin:0;
+    color:#CE1414;
+}
+
+.date span{
+    color:#CE1414;
+}
+
+.yellow h2,
+.yellow span{
+    color:#CE9314;
+}
+
+.blue h2,
+.blue span{
+    color:#3A86FF;
+}
+
+.task-info h6{
+    color:white;
+    margin:0;
+}
+
+.task-info p{
+    color:#cfcfcf;
+    margin:0;
+}
+
+.tag{
+    padding:6px 12px;
+    border-radius:4px;
+    color:white;
+    font-size:12px;
+}
+
+.red{
+    background:#CE1414;
+}
+
+.yellow-bg{
+    background:#CE9314;
+}
+
+.blue-bg{
+    background:#3A86FF;
+}
+
+.deadline-card hr{
+    border-color:#3A86FF;
+}
+
+.bottom-section{
+    display:flex;
+    gap:25px;
+    margin-top:30px;
+    width:100%;
+}
+
+.progress-card{
+    width:48%;
+    background:#2B2D42;
+    border-radius:12px;
+    padding:30px;
+}
+
+.deadline-card{
+    width:52%;
+    background:#2B2D42;
+    border-radius:12px;
+    padding:30px;
+}
+
+.score-card{
+    background:#2A2D4F;
+    border-radius:12px;
+    padding:35px 40px;
+
+    display:flex;
+    align-items:flex-start;
+    gap:80px;
+
+    margin-top:30px;
+    color:white;
+}
+
+.score-left h5,
+.score-right h5{
+    margin-bottom:25px;
+    font-size:20px;
+}
+
+.score-circle{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+        #3DCAC5 0deg,
+        #3A86FF 280deg,
+        #2B2D42 280deg,
+        #2B2D42 360deg
+    );
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.score-circle::before{
+    content:"";
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    background:#2B2D42;
+    border-radius:50%;
+}
+
+.score-number{
+    position:relative;
+    z-index:2;
+
+    font-size:48px;
+    font-weight:bold;
+}
+
+.score-text{
+    position:relative;
+    z-index:2;
+
+    color:#4DA3FF;
+    font-size:14px;
+}
+
+.score-right p{
+    font-family: Futura Md BT;
+    max-width:250px;
+    line-height:1.6;
+    font-size:18px;
+}
+
+.footer-section{
+    background-image: url(./Images/footer.png);
+    background-size: cover;
+    height: 250px;
+}
+
+.footer-section h5{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.footer-section ul li{
+    margin-bottom:10px;
+}
+
+.footer-section ul li a{
+    text-decoration:none;
+    color:#3A86FF;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.footer-section ul li a:hover{
+    color:white;
+}
+
+.res{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.pro{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.com{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.col-md-2{font-family: Futura Md BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.follow-text{
+    color:#3A86FF;
+    margin-bottom:15px;
+}
+
+.col-md-3{text-align: left;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.col-md-3 h4{
+    margin-bottom:5px;
+}
+
+
+.col-md-3 p{
+    text-align: left;
+    margin:0;
+}
+
+.social-icons{
+    margin-bottom:40px;
+}
+
+.social-icons a{
+    color:#3A86FF;
+    font-size:28px;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.social-icons a:hover{
+    color:white;
+}
+
+.copyright{
+    color:#3A86FF;
+    font-size:18px;
+    margin-top:60px;
+}
+
+</style>
+
+<body>
+    
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-white py-4">
+<div class="container-fluid p-0 d-flex align-items-center">
+
+<a class="navbar-brand" href="#">
+    <img src="./Images/GRID-Logo-07.png" alt="" class="logo-img">
+</a>
+
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="./index.html" >Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./dashboard.html" style="color: #3A86FF;" >Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./features.html">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+
+</ul>
+
+<div class="button">
+
+<button class="btn btn-outline-primary me-2">
+Sign Up
+</button>
+
+<button class="btn btn-primary">
+Login
+</button>
+
+</div>
+
+</div>
+
+</div>
+</nav>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <ul class="menu">
+            <li>
+    <a href="./mytask.html">
+        <i class="fa-regular fa-circle-check"></i>
+        My Tasks
+    </a>
+</li>
+
+<li>
+    <a href="./calendar.html">
+        <i class="fa-regular fa-calendar"></i>
+        Calendar
+    </a>
+</li>
+
+<li>
+    <a href="./project.html">
+        <i class="fa-regular fa-folder"></i>
+        Projects
+    </a>
+</li>
+
+<li>
+    <a href="./notes.html">
+        <i class="fa-regular fa-note-sticky"></i>
+        Notes
+    </a>
+</li>
+        </ul>
+
+        <hr>
+
+        <ul class="menu">
+            <li><i class="fa-solid fa-gear"></i> Settings</li>
+            <li><i class="fa-solid fa-right-from-bracket"></i> Log out</li>
+        </ul>
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="main-content">
+
+        <!-- Banner -->
+        <div class="welcome-banner">
+
+    <div class="banner-text">
+        <h3>Good Morning, Sara!</h3>
+
+        <p>
+            You have 8 task pending today,<br>
+            Let's make today another<br>
+            productive day
+        </p>
+    </div>
+
+</div>
+
+        <!-- Stat Cards -->
+        <div class="stats-row">
+
+            <div class="stat-card">
+                <div>
+                    <h6>Total Tasks</h6>
+                    <h2>12</h2>
+                    <p>View all task ></p>
+                </div>
+
+                <i class="fa-regular fa-calendar-days stat-icon"></i>
+            </div>
+
+            <div class="stat-card">
+                <div>
+                    <h6>Completed</h6>
+                    <h2>10</h2>
+                    <p>66.7% of total</p>
+                </div>
+
+                <i class="fa-regular fa-circle-check stat-icon"></i>
+            </div>
+
+            <div class="stat-card">
+                <div>
+                    <h6>Pending</h6>
+                    <h2>6</h2>
+                    <p>To be completed</p>
+                </div>
+
+                <i class="fa-solid fa-hourglass-half stat-icon"></i>
+            </div>
+
+            <div class="stat-card">
+                <div>
+                    <h6>Progress</h6>
+                    <h2>67%</h2>
+                    <p>Almost there!</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-trend-up stat-icon"></i>
+            </div>
+
+        </div>
+
+        <!-- Today's Tasks -->
+        <div class="task-card">
+
+            <div class="task-header">
+                <span>Today's Tasks</span>
+                <a href="#">View all</a>
+            </div>
+
+            <div class="task-row">
+                <div class="left">
+                    <div class="check"></div>
+                    <span>Finishing UI Design for freelance</span>
+                    <span class="high">High</span>
+                </div>
+
+                <div class="right">
+                    <span>10:00 AM</span>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <div class="task-row">
+                <div class="left">
+                    <div class="check"></div>
+                    <span>Complete Design Assignment</span>
+                    <span class="low">Low</span>
+                </div>
+
+                <div class="right">
+                    <span>06:00 PM</span>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <div class="task-row">
+                <div class="left">
+                    <div class="check"></div>
+                    <span>Submit Report to Professor</span>
+                    <span class="medium">Medium</span>
+                </div>
+
+                <div class="right">
+                    <span>01:00 PM</span>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+             <div class="task-row">
+                <div class="left">
+                    <div class="check"></div>
+                    <span>Read Chapter 5-Before the Coffee Gets Cold</span>
+                    <span class="low">Low</span>
+                </div>
+
+                <div class="right">
+                    <span>10:00 PM</span>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <div class="add-task">
+
+    <i class="fa-solid fa-plus"></i>
+
+    <span>Add New Task</span>
+
+</div>
+
+        </div>
+
+        <div class="bottom-section">
+
+<div class="progress-card">
+
+    <h5 style="font-family: Futura Md BT; color: #f8f9fa;">Your Progress Grid</h5>
+
+    <div class="grid">
+
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+        <div class="box"></div>
+
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box completed"></div>
+        <div class="box completed"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+
+    <div class="progress-details">
+        <span>12 of 20 tasks completed</span>
+        <span>67%</span>
+    </div>
+
+    <div class="custom-progress">
+        <div class="progress-fill"></div>
+    </div>
+
+</div>
+
+<div class="deadline-card">
+
+    <div class="deadline-header">
+        <h5>Upcoming Deadlines</h5>
+        <a href="#">View all</a>
+    </div>
+
+    <div class="deadline-row">
+
+        <div class="date">
+            <h2>15</h2>
+            <span>JUL</span>
+        </div>
+
+        <div class="task-info">
+            <h6>Web design project</h6>
+            <p>10:00 AM</p>
+        </div>
+
+        <span class="tag red">In 2 days</span>
+
+    </div>
+
+    <hr>
+
+    <div class="deadline-row">
+
+        <div class="date yellow">
+            <h2>20</h2>
+            <span>JUL</span>
+        </div>
+
+        <div class="task-info">
+            <h6>Presentation Slides</h6>
+            <p>11:00 PM</p>
+        </div>
+
+        <span class="tag yellow-bg">In 7 days</span>
+
+    </div>
+
+    <hr>
+
+    <div class="deadline-row">
+
+        <div class="date blue">
+            <h2>28</h2>
+            <span>JUL</span>
+        </div>
+
+        <div class="task-info">
+            <h6>Final submission</h6>
+            <p>11:00 PM</p>
+        </div>
+
+        <span class="tag blue-bg">In 12 days</span>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="score-card">
+
+    <div class="score-left">
+
+        <h5>Productivity Score</h5>
+
+        <div class="score-circle">
+            <span class="score-number">78</span>
+            <span class="score-text">Excellent</span>
+        </div>
+
+    </div>
+
+    <div class="score-right">
+
+        <h5>This week</h5>
+
+        <p>
+            Keep it up! You're more
+            productive than 85% of
+            users
+        </p>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-2">
+                <h5 class="pro">Product</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="com">Company</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="res">Resources</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 text-end">
+
+                <h5 class="follow-text">Follow GRID</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+
+                    <a href="#"><i class="fas fa-globe"></i></a>
+
+                </div>
+
+                <p class="copyright">
+                    © 2026 GRID. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="dashboard.js"></script>
+
+
+</body>
+</html>

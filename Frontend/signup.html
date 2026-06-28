@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>signup</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<style>
+ .logo-img{
+    height:60px;
+    width:auto;
+}
+
+
+.logo{
+    color:#3A86FF;
+}
+
+.button{padding-right: 50px;}
+
+.navbar-brand{padding-left:50px;}
+
+.nav-link{font-family: Futura Md BT;
+    font-weight:500;
+    font-size: 20px;
+    margin-left:20px;
+}
+
+.nav-link:hover{
+    color:#4DA3FF;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 60px;
+}
+
+.signup-section{
+    background:#2A2D4F;
+    display:flex;
+    justify-content:space-between;
+    padding:40px;
+    margin-top:20px;
+    min-height:700px;
+}
+
+.signup-left{
+    width:50%;
+}
+
+.promo-box{
+    height:620px;
+    border-radius:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background-image: url(./Images/Artboard\ 4.png);
+
+  
+}
+
+.promo-box h1{
+    width:80%;
+    color:white;
+    text-align:center;
+    font-size:4rem;
+    line-height:1.3;
+    font-family:"Futura BdCn BT";
+}
+
+.promo-box span{
+    color:#4A8DFF;
+}
+
+.signup-right{
+    width:42%;
+    color:white;
+}
+
+.signup-right h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-family:"Futura BdCn BT";
+}
+
+.signup-right label{
+    display:block;
+    margin-bottom:8px;
+    margin-top:25px;
+    font-size:24px;
+}
+
+.signup-right input{
+    width:100%;
+    height:55px;
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(
+    90deg,
+    #3D8A95,
+    #2E506B
+    );
+
+    padding:0 15px;
+    color:white;
+}
+
+.signup-right input:focus{
+    outline:none;
+}
+
+.signup-btn{
+    margin-top:40px;
+    border:none;
+    background:#4A8DFF;
+    color:white;
+    padding:10px 35px;
+    border-radius:10px;
+    font-size:20px;
+}
+
+.signin-text{
+    text-align:center;
+    margin-top:20px;
+}
+
+.signin-text a{
+    color:#4A8DFF;
+    text-decoration:none;
+}
+
+.footer-section{
+    background-image: url(./Images/footer.png);
+    background-size: cover;
+    height: 250px;
+}
+
+.footer-section h5{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.footer-section ul li{
+    margin-bottom:10px;
+}
+
+.footer-section ul li a{
+    text-decoration:none;
+    color:#3A86FF;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.footer-section ul li a:hover{
+    color:white;
+}
+
+.res{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.pro{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.com{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.col-md-2{font-family: Futura Md BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.follow-text{
+    color:#3A86FF;
+    margin-bottom:15px;
+}
+
+.col-md-3{text-align: left;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.col-md-3 h4{
+    margin-bottom:5px;
+}
+
+
+.col-md-3 p{
+    text-align: left;
+    margin:0;
+}
+
+.social-icons{
+    margin-bottom:40px;
+}
+
+.social-icons a{
+    color:#3A86FF;
+    font-size:28px;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.social-icons a:hover{
+    color:white;
+}
+
+.copyright{
+    color:#3A86FF;
+    font-size:18px;
+    margin-top:60px;
+}
+
+</style>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-white py-4">
+<div class="container-fluid p-0 d-flex align-items-center">
+
+<a class="navbar-brand" href="#">
+    <img src="./Images/GRID-Logo-07.png" alt="" class="logo-img">
+</a>
+
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="./index.html" style="color:#3A86FF;">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./dashboard.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./features.html">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+
+</ul>
+
+<div class="button">
+
+<button class="btn btn-outline-primary me-2">
+Sign Up
+</button>
+
+<button class="btn btn-primary">
+Login
+</button>
+
+</div>
+
+</div>
+
+</div>
+</nav>
+
+
+<div class="signup-section">
+
+    <!-- Left Side -->
+    <div class="signup-left">
+
+        <div class="promo-box">
+            <h1>
+                Join <span>GRID</span> today and transform
+                your daily actions into
+                meaningful achievements.
+            </h1>
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="signup-right">
+
+        <h2>Sign UP</h2>
+
+        <form>
+
+          <label>First Name</label>
+<input type="text" id="firstName">
+
+           <label>Second Name</label>
+<input type="text" id="lastName">
+
+<label>Email/Mobile No</label>
+<input type="email" id="email">
+
+<label>Password</label>
+<input type="password" id="password">
+
+            <div class="text-center">
+                <button type="submit" class="signup-btn">
+                    Sign Up
+                </button>
+            </div>
+
+        </form>
+
+        <p class="signin-text">
+            Already have an account?
+            <a href="./login.html">Sign in</a>
+        </p>
+
+    </div>
+
+</div>
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-2">
+                <h5 class="pro">Product</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="com">Company</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="res">Resources</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 text-end">
+
+                <h5 class="follow-text">Follow GRID</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+
+                    <a href="#"><i class="fas fa-globe"></i></a>
+
+                </div>
+
+                <p class="copyright">
+                    © 2026 GRID. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="signup.js"></script>
+
+</body>
+</html>

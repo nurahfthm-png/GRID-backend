@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>feature</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<style>
+
+ .logo-img{
+    height:60px;
+    width:auto;
+}
+
+.button{padding-right: 50px;}
+
+.navbar-brand{padding-left:50px;}
+
+body{
+
+    background:#f8f9fa;
+}
+
+.logo{
+    color:#3A86FF;
+}
+
+.nav-link{font-family: Futura Md BT;
+    font-weight:500;
+    font-size: 20px;
+    margin-left:20px;
+}
+
+.nav-link:hover{
+    color:#4DA3FF;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 60px;
+}
+
+.features-page{
+    padding:40px 60px;
+}
+
+/* HERO */
+
+.hero-section{
+    background-image: url(./Images/Artboard\ 2.png);
+    background-size: cover;
+
+    border-radius:15px;
+
+    min-height:260px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:50px;
+    color:white;
+}
+
+.hero-tag{
+    color:#3A86FF;
+    font-size:24px;
+}
+
+.hero-left h1{
+    font-size:58px;
+    line-height:1.2;
+    margin:15px 0;
+}
+
+.hero-left h1 span{
+    color:#3A86FF;
+}
+
+.hero-left p{
+    max-width:450px;
+    font-size:24px;
+}
+
+.hero-center button{
+    background:#3A86FF;
+    color:white;
+    border:none;
+    padding:15px 40px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.hero-right{
+    width:250px;
+    height:200px;
+    position:relative;
+}
+
+
+.b1{
+    width:30px;
+    height:60px;
+    top:10px;
+    right:90px;
+}
+
+.b2{
+    width:35px;
+    height:70px;
+    top:30px;
+    right:0;
+}
+
+.b3{
+    width:40px;
+    height:95px;
+    bottom:20px;
+    right:60px;
+}
+
+.b4{
+    width:30px;
+    height:65px;
+    top:90px;
+    left:20px;
+}
+
+.b5{
+    width:35px;
+    height:80px;
+    top:70px;
+    left:90px;
+}
+
+/* FEATURES ROW */
+
+.features-row{
+    margin:60px 0;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.feature-item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    max-width:250px;
+}
+
+.feature-item i{
+    color:#3A86FF;
+    font-size:60px;
+}
+
+.feature-item h4{
+    margin-bottom:8px;
+}
+
+/* HOW IT WORKS */
+
+.how-it-works{
+    text-align:center;
+}
+
+.how-it-works h3{
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.how-it-works h2{
+    font-size:48px;
+    margin-bottom:80px;
+}
+
+.steps-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.step-card{
+    background:#2B2D42;
+    width:260px;
+    height:280px;
+    border-radius:12px;
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.step-number{
+    position:absolute;
+    top:-25px;
+
+    width:60px;
+    height:60px;
+
+    background:#3A86FF;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:6px;
+    font-size:28px;
+}
+
+.step-card i{
+    font-size:70px;
+    color:#3A86FF;
+    margin-bottom:20px;
+}
+
+.step-card h4{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.step-card p{
+    width:80%;
+    text-align:center;
+}
+
+.arrow{
+    font-size:60px;
+    color:#3A86FF;
+}
+
+
+@media(max-width:992px){
+
+.hero-section{
+    flex-direction:column;
+    gap:30px;
+    text-align:center;
+}
+
+.features-row{
+    justify-content:center;
+}
+
+.steps-container{
+    flex-direction:column;
+}
+
+.arrow{
+    transform:rotate(90deg);
+}
+}
+
+
+.footer-section{
+    background-image: url(./Images/footer.png);
+    background-size: cover;
+    height: 250px;
+}
+
+.footer-section h5{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.footer-section ul li{
+    margin-bottom:10px;
+}
+
+.footer-section ul li a{
+    text-decoration:none;
+    color:#3A86FF;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.footer-section ul li a:hover{
+    color:white;
+}
+
+.res{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.pro{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.com{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.col-md-2{font-family: Futura Md BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.follow-text{
+    color:#3A86FF;
+    margin-bottom:15px;
+}
+
+.col-md-3{text-align: left;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.col-md-3 h4{
+    margin-bottom:5px;
+}
+
+
+.col-md-3 p{
+    text-align: left;
+    margin:0;
+}
+
+.social-icons{
+    margin-bottom:40px;
+}
+
+.social-icons a{
+    color:#3A86FF;
+    font-size:28px;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.social-icons a:hover{
+    color:white;
+}
+
+.copyright{
+    color:#3A86FF;
+    font-size:18px;
+    margin-top:60px;
+}
+
+
+</style>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-white py-4">
+<div class="container-fluid p-0 d-flex align-items-center">
+
+<a class="navbar-brand" href="#">
+    <img src="./Images/GRID-Logo-07.png" alt="" class="logo-img">
+</a>
+
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="./index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./dashboard.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" style="color:#3A86FF;" href="./features.html">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+
+</ul>
+
+<div class="button">
+
+<button class="btn btn-outline-primary me-2">
+Sign Up
+</button>
+
+<button class="btn btn-primary">
+Login
+</button>
+
+</div>
+
+</div>
+
+</div>
+</nav>
+
+<main class="features-page">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+
+        <div class="hero-left">
+            <span class="hero-tag" style="font-family: Futura Md BT; color:#3A86FF;">FEATURES</span>
+
+            <h1 style="font-family: Futura BdCn BT;">
+                Powerful Feature<br>
+                For Better <span>Productivity</span>
+            </h1>
+
+            <p style="font-family: Futura Md BT;">
+                Everything you need to organize tasks,
+                track progress, and achieve your goals.
+            </p>
+        </div>
+
+        <div class="hero-center">
+            <button>Learn More</button>
+        </div>
+
+        <div class="hero-right">
+            <div class="block b1"></div>
+            <div class="block b2"></div>
+            <div class="block b3"></div>
+            <div class="block b4"></div>
+            <div class="block b5"></div>
+        </div>
+
+    </section>
+
+    <!-- Feature Icons -->
+    <section class="features-row">
+
+        <div class="feature-item">
+            <i class="fa-regular fa-pen-to-square"></i>
+
+            <div>
+                <h4 style="font-family: Futura BdCn BT;">Add</h4>
+                <p style="font-family: Futura Md BT;">Add your task and plan your goals</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <i class="fa-solid fa-bars"></i>
+
+            <div>
+                <h4 style="font-family: Futura BdCn BT;">Organize</h4>
+                <p style="font-family: Futura Md BT;">Arrange and prioritize what matters most</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <i class="fa-solid fa-chart-line"></i>
+
+            <div>
+                <h4 style="font-family: Futura BdCn BT;">Track</h4>
+                <p style="font-family: Futura Md BT;">Monitor your progress</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <i class="fa-solid fa-trophy"></i>
+
+            <div>
+                <h4 style="font-family: Futura BdCn BT;">Achieve</h4>
+                <p style="font-family: Futura Md BT;">Complete task and unlock your potential</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- How Grid Works -->
+    <section class="how-it-works">
+
+        <h3 style="font-family: Futura Md BT;">HOW GRID WORKS</h3>
+        <h2 style="font-family: Futura Md BT;">Simple Steps. Powerful Results.</h2>
+
+        <div class="steps-container">
+
+            <div class="step-card">
+
+                <div class="step-number">1</div>
+
+                <i class="fa-regular fa-pen-to-square"></i>
+
+                <h4 style="font-family: Futura Md BT;">Create</h4>
+
+                <p>
+                    Add task, Set priorities,
+                    and organize your goals
+                </p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step-card">
+
+                <div class="step-number">2</div>
+
+                <i class="fa-regular fa-circle-check"></i>
+
+                <h4 style="font-family: Futura Md BT;">Complete</h4>
+
+                <p>
+                    Work through your tasks
+                    and check them off.
+                </p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step-card">
+
+                <div class="step-number">3</div>
+
+                <i class="fa-solid fa-table-cells-large"></i>
+
+                <h4 style="font-family: Futura Md BT;">Shape</h4>
+
+                <p>
+                    Watch your grid grow as
+                    your progress builds up
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-2">
+                <h5 class="pro">Product</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="com">Company</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="res">Resources</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 text-end">
+
+                <h5 class="follow-text">Follow GRID</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+
+                    <a href="#"><i class="fas fa-globe"></i></a>
+
+                </div>
+
+                <p class="copyright">
+                    © 2026 GRID. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/task.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>about</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<style>
+
+ .logo-img{
+    height:60px;
+    width:auto;
+}
+
+.button{padding-right: 50px;}
+
+.navbar-brand{padding-left:50px;}
+
+body{
+   
+    background:#f8f9fa;
+}
+
+.logo{
+    color:#3A86FF;
+}
+
+.nav-link{font-family: Futura Md BT;
+    font-weight:500;
+    font-size: 20px;
+    margin-left:20px;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 60px;
+}
+
+.nav-link:hover{
+    color:#4DA3FF;
+}
+
+.about-page{
+    width:100%;
+}
+
+/* INTRO */
+
+.about-intro{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+
+    padding:60px 80px;
+    flex-wrap:wrap;
+}
+
+.logo-card{
+    width:500px;
+    height:350px;
+
+    background-image: url(./Images/Artboard\ 3.png);
+    background-size: cover;
+    border-radius:10px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+
+
+
+
+.sq1{
+    width:25px;
+    height:25px;
+    top:70px;
+    right:140px;
+}
+
+.sq2{
+    width:20px;
+    height:20px;
+    top:100px;
+    right:170px;
+}
+
+.sq3{
+    width:30px;
+    height:30px;
+    left:70px;
+    bottom:60px;
+}
+
+.sq4{
+    width:25px;
+    height:25px;
+    left:120px;
+    bottom:40px;
+}
+
+.about-text{
+    max-width:550px;
+}
+
+.about-text p{
+    font-size:22px;
+    line-height:1.6;
+    color:#2d2d48;
+}
+
+/* IDEA */
+
+.idea-section{
+    padding:20px 80px 60px;
+}
+
+.idea-section h2{
+    font-size:52px;
+    color:#2d2d48;
+    margin-bottom:40px;
+}
+
+.idea-section p{
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:30px;
+    color:#2d2d48;
+}
+
+/* MISSION */
+
+.mission-vision{
+    border-top:1px solid #74d8ff;
+    border-bottom:1px solid #2d2d48;
+
+    padding:70px 80px;
+
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.mission-box{
+    text-align:center;
+}
+
+.mission-box h3{
+    font-size:48px;
+    margin-bottom:30px;
+    color:#2d2d48;
+}
+
+.info-card{
+    width:420px;
+
+    border:1px solid #74d8ff;
+    border-radius:8px;
+
+    padding:35px;
+
+    font-size:20px;
+    line-height:1.6;
+
+    color:#3b82f6;
+    text-align:left;
+}
+
+/* VALUES */
+
+.core-values{
+    padding:80px;
+}
+
+.core-values h2{
+    text-align:center;
+    font-size:52px;
+    color:#2d2d48;
+    margin-bottom:60px;
+}
+
+.values-grid{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.value-card{
+    width:320px;
+
+    border:1px solid #74d8ff;
+    border-radius:8px;
+
+    padding:30px;
+}
+
+.value-card h4{
+    font-size:32px;
+    margin-bottom:20px;
+    color:#2d2d48;
+}
+
+.value-card p{
+    color:#3A86FF;
+    font-size:18px;
+    line-height:1.5;
+}
+
+/* QUOTE */
+
+.quote-banner{
+    background-image: url(./Images/Artboard\ 4.png);
+    background-size: cover;
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+.quote-banner h2{
+    color:#3A86FF;
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.quote-banner p{
+    color:white;
+    font-size:28px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .about-intro{
+        padding:40px 30px;
+    }
+
+    .logo-card{
+        width:100%;
+        max-width:500px;
+    }
+
+    .about-text p{
+        font-size:18px;
+    }
+
+    .idea-section{
+        padding:40px 30px;
+    }
+
+    .mission-vision{
+        padding:50px 30px;
+    }
+
+    .info-card{
+        width:100%;
+        max-width:420px;
+    }
+
+    .core-values{
+        padding:50px 30px;
+    }
+
+    .quote-banner h2{
+        font-size:36px;
+    }
+}
+
+.footer-section{
+    background-image: url(./Images/footer.png);
+    background-size: cover;
+    height: 250px;
+}
+
+.footer-section h5{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.footer-section ul li{
+    margin-bottom:10px;
+}
+
+.footer-section ul li a{
+    text-decoration:none;
+    color:#3A86FF;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.footer-section ul li a:hover{
+    color:white;
+}
+
+.res{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.pro{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.com{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.col-md-2{font-family: Futura Md BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.follow-text{
+    color:#3A86FF;
+    margin-bottom:15px;
+}
+
+.col-md-3{text-align: left;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.col-md-3 h4{
+    margin-bottom:5px;
+}
+
+
+.col-md-3 p{
+    text-align: left;
+    margin:0;
+}
+
+.social-icons{
+    margin-bottom:40px;
+}
+
+.social-icons a{
+    color:#3A86FF;
+    font-size:28px;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.social-icons a:hover{
+    color:white;
+}
+
+.copyright{
+    color:#3A86FF;
+    font-size:18px;
+    margin-top:60px;
+}
+
+
+</style>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-white py-4">
+<div class="container-fluid p-0 d-flex align-items-center">
+
+<a class="navbar-brand" href="#">
+    <img src="./Images/GRID-Logo-07.png" alt="" class="logo-img">
+</a>
+
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="./index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./dashboard.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./features.html">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" style="color:#3A86FF;" href="./about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+
+</ul>
+
+<div class="button">
+
+<a href="./signup.html" class="btn btn-outline-primary me-2">
+    Sign Up
+</a>
+
+<a href="./signup.html" class="btn btn-primary">
+    Log In
+</a>
+
+</div>
+
+</div>
+
+</div>
+</nav>
+
+<main class="about-page">
+
+    <!-- Intro Section -->
+    <section class="about-intro">
+
+        <div class="about-image">
+            <div class="logo-card">
+
+            </div>
+        </div>
+
+        <div class="about-text">
+            <p style="font-family: Futura Md BT;">
+                <strong>GRID</strong> was created to help people organize
+                their daily tasks and transform small actions into
+                meaningful achievements.
+
+                Inspired by the structure and balance of design grids,
+                the platform provides a clear and visual way to track
+                progress and stay focused on what matters most.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Idea Section -->
+    <section class="idea-section">
+
+        <h2 style="font-family: Futura BdCn BT;">The Idea Behind GRID</h2>
+
+        <p style="font-family: Futura Md BT;">
+           Every achievement starts with a small action. 
+           Whether it is completing an assignment, learning a 
+           new skill, or reaching a personal goal, progress 
+           happens one step at a time.
+        </p>
+
+        <p style="font-family: Futura Md BT;">
+            GRID was designed around this idea. Each completed task fills
+            a block in your personal grid, creating a visual
+            representation of growth and accomplishment.
+        </p>
+
+    </section>
+
+    <!-- Mission Vision -->
+    <section class="mission-vision">
+
+        <div class="mission-box">
+
+            <h3 style="font-family: Futura BdCn BT;">Mission</h3>
+
+            <div class="info-card" style="font-family: Futura Md BT;">
+                To provide a simple and engaging productivity platform
+                that helps users stay organized, motivated, and focused.
+            </div>
+
+        </div>
+
+        <div class="mission-box">
+
+            <h3 style="font-family: Futura BdCn BT;">Vision</h3>
+
+            <div class="info-card" style="font-family: Futura Md BT;">
+                To transform task management into a visual journey where
+                progress is easy to understand and rewarding to achieve.
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Core Values -->
+    <section class="core-values">
+
+        <h2 style="font-family: Futura BdCn BT;">Core Values</h2>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+                <h4>Structure</h4>
+                <p style="font-family: Futura Md BT;">
+                    Like a design grid,
+                    organization creates clarity.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h4 style="font-family: Futura BdCn BT;">Progress</h4>
+                <p style="font-family: Futura Md BT;">
+                    Every completed task contributes
+                    to a bigger goal.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h4 style="font-family: Futura BdCn BT;">Growth</h4>
+                <p style="font-family: Futura Md BT;">
+                    Small consistent actions lead
+                    to meaningful results.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Quote Banner -->
+    <section class="quote-banner">
+
+        <h2 style="font-family: Futura BdCn BT;">
+            "Great achievements are built one task at a time."
+        </h2>
+
+        <p style="font-family: Futura Md BT;">Start Shaping Your Goals</p>
+
+    </section>
+
+</main>
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-2">
+                <h5 class="pro">Product</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="com">Company</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="res">Resources</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 text-end">
+
+                <h5 class="follow-text">Follow GRID</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+
+                    <a href="#"><i class="fas fa-globe"></i></a>
+
+                </div>
+
+                <p class="copyright">
+                    © 2026 GRID. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/task.js"></script>
+
+</body>
+</html>

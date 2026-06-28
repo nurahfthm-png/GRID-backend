@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>mytask</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<style>
+
+ .logo-img{
+    height:60px;
+    width:auto;
+}
+
+.button{padding-right: 50px;}
+
+.navbar-brand{padding-left:50px;}
+
+body{
+   
+    background:#f8f9fa;
+}
+
+.logo{
+    color:#3A86FF;
+}
+
+.nav-link{font-family: Futura Md BT;
+    font-weight:500;
+    font-size: 20px;
+    margin-left:20px;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 60px;
+}
+
+.nav-link:hover{
+    color:#4DA3FF;
+}
+
+.sidebar{
+    width:220px;
+    min-height:100vh;
+    border-right:1px solid #3A86FF;
+    padding:30px 20px;
+}
+
+.menu{
+    list-style:none;
+    padding:0;
+}
+
+.menu li{
+    margin:25px 0;
+    color:#2B2D42;
+    font-family: Futura Md BT;
+}
+
+.menu i{
+    font-size: 30px;
+    color:#3A86FF;
+    margin-right:15px;
+}
+
+.main-content{
+    flex:1;
+    padding:30px;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.sidebar ul li{
+    list-style:none;
+    margin:20px 0;
+}
+
+.mytask-card{
+    font-family: Futura Md BT;
+    color: #ffffff;
+    flex: 1;
+    margin: 40px;
+    background: #2B2D42;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.task-title{
+    margin-bottom:25px;
+}
+
+.task-row{
+    background:linear-gradient(90deg,#3DCAC5,#2B2D42);
+    border-radius:12px;
+    font-family: Futura Md BT;
+    color: rgb(250, 250, 250);
+    padding:18px 15px;
+    margin-bottom:18px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.task-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.task-left input{
+    width:22px;
+    height:22px;
+    accent-color:#3A86FF;
+}
+
+.task-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+
+.task-date{
+    min-width:120px;
+}
+
+.delete-icon,
+.fa-ellipsis-vertical{
+    color:#3A86FF;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.add-task{
+    color:#3A86FF;
+    margin-top:30px;
+    font-family: Futura Md BT;
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    font-size:22px;
+    cursor:pointer;
+}
+
+.delete-modal{
+    background:#2A2D4F;
+    border:none;
+    border-radius:15px;
+    width:260px;
+    margin:auto;
+}
+
+.trash-icon{
+    font-size:35px;
+    color:#3A86FF;
+    margin-bottom:15px;
+}
+
+
+.delete-modal h4{
+    color:white;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.delete-modal p{
+    font-family: Futura Md BT;
+    color:white;
+    font-size:18px;
+    line-height:1.5;
+    margin-bottom:25px;
+}
+
+.delete-btn{
+    font-family: Futura Md BT;
+    background:#FF1E1E;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:8px 25px;
+}
+
+.cancel-btn{
+    background:#FF1E1E;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:8px 25px;
+}
+
+.edit-icon {
+    color: #3A86FF;
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.delete-btn:hover,
+.cancel-btn:hover{
+    color:white;
+}
+
+.modal-backdrop.show{
+    opacity:25%;
+}
+
+.dashboard{
+    display: flex;
+    align-items: flex-start;
+}
+
+.create-task-modal{
+    background:#2A2D4F;
+    color:white;
+    border-radius:15px;
+}
+
+.custom-input{
+    background:linear-gradient(
+        90deg,
+        #3B8A94,
+        #324864
+    );
+    border:none;
+    color:white;
+    height:55px;
+}
+
+.custom-textarea{
+    background:linear-gradient(
+        90deg,
+        #3B8A94,
+        #2A2D4F
+    );
+    border:none;
+    color:white;
+    height:150px;
+    resize:none;
+}
+
+.form-label,
+label{
+    color:white;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.action-btn{
+    background:#3A86FF;
+    color:white;
+    border:none;
+    padding:10px 30px;
+    border-radius:10px;
+}
+
+.action-btn:hover{
+    background:#3A86FF;
+    color:white;
+}
+
+.delete-modal{
+    background:#2A2D4F;
+    border:none;
+    border-radius:15px;
+    width:250px;
+    margin:auto;
+}
+
+.trash-icon{
+    font-size:40px;
+    color:#3A86FF;
+    margin-bottom:15px;
+}
+
+.delete-modal h4{
+    color:white;
+    font-family:Futura BdCn BT;
+    margin-bottom:15px;
+}
+
+.delete-modal p{
+    color:white;
+    font-size:16px;
+    line-height:1.6;
+}
+
+.delete-btn,
+.cancel-btn{
+    background:#CE1414;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:8px 20px;
+    font-size:18px;
+}
+
+.delete-btn:hover,
+.cancel-btn:hover{
+    background:#CE1414;
+    color:white;
+}
+
+/* Dark background */
+.modal-backdrop.show{
+    opacity:0.75;
+}
+
+.footer-section{
+    background-image: url(./Images/footer.png);
+    background-size: cover;
+    height: 250px;
+}
+
+.footer-section h5{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.footer-section ul li{
+    margin-bottom:10px;
+}
+
+.footer-section ul li a{
+    text-decoration:none;
+    color:#3A86FF;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.footer-section ul li a:hover{
+    color:white;
+}
+
+.res{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.pro{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.com{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.col-md-2{font-family: Futura Md BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.follow-text{
+    color:#3A86FF;
+    margin-bottom:15px;
+}
+
+.col-md-3{text-align: left;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.col-md-3 h4{
+    margin-bottom:5px;
+}
+
+
+.col-md-3 p{
+    text-align: left;
+    margin:0;
+}
+
+.social-icons{
+    margin-bottom:40px;
+}
+
+.social-icons a{
+    color:#3A86FF;
+    font-size:28px;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.social-icons a:hover{
+    color:white;
+}
+
+.copyright{
+    color:#3A86FF;
+    font-size:18px;
+    margin-top:60px;
+}
+
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-white py-4">
+<div class="container-fluid p-0 d-flex align-items-center">
+
+<a class="navbar-brand" href="#">
+    <img src="./Images/GRID-Logo-07.png" alt="" class="logo-img">
+</a>
+
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="./index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" style="color:#3A86FF;"  href="./dashboard.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./features.html">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+
+</ul>
+
+<div class="button">
+
+<a href="./signup.html" class="btn btn-outline-primary me-2">
+    Sign Up
+</a>
+
+<a href="./signup.html" class="btn btn-primary">
+    Log In
+</a>
+
+</div>
+
+</div>
+
+</div>
+</nav>
+
+<div class="dashboard">
+
+ <!-- Sidebar -->
+    <div class="sidebar">
+
+        <ul class="menu">
+           <li>
+    <a href="./mytask.html">
+        <i class="fa-regular fa-circle-check"></i>
+        My Tasks
+    </a>
+</li>
+
+<li>
+    <a href="./calendar.html">
+        <i class="fa-regular fa-calendar"></i>
+        Calendar
+    </a>
+</li>
+
+<li>
+    <a href="./project.html">
+        <i class="fa-regular fa-folder"></i>
+        Projects
+    </a>
+</li>
+
+<li>
+    <a href="./notes.html">
+        <i class="fa-regular fa-note-sticky"></i>
+        Notes
+    </a>
+</li>
+        </ul>
+
+        <hr>
+
+        <ul class="menu">
+            <li><i class="fa-solid fa-gear"></i> Settings</li>
+            <li><i class="fa-solid fa-right-from-bracket"></i> Log out</li>
+        </ul>
+
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content delete-modal">
+
+      <div class="modal-body text-center">
+
+        <i class="fa-regular fa-trash-can trash-icon"></i>
+
+        <h4>Delete Task?</h4>
+
+        <p>
+          Are you sure you<br>
+          want to delete this<br>
+          task?
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+
+          <button
+            type="button" id="confirmDeleteBtn"
+            class="btn delete-btn">
+            Delete
+          </button>
+
+          <button
+            type="button"
+            class="btn cancel-btn"
+            data-bs-dismiss="modal">
+            Cancel
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="mytask-card">
+
+    <h4 class="task-title">My Tasks</h4>
+
+    <div id="tasksContainer"></div>
+
+   
+
+    <div class="add-task"
+     data-bs-toggle="modal"
+     data-bs-target="#createTaskModal">
+
+    <i class="fa-solid fa-plus"></i>
+    <span>Add New Task</span>
+
+</div>
+
+</div>
+  </div>  
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-2">
+                <h5 class="pro">Product</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="com">Company</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="res">Resources</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 text-end">
+
+                <h5 class="follow-text">Follow GRID</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+
+                    <a href="#"><i class="fas fa-globe"></i></a>
+
+                </div>
+
+                <p class="copyright">
+                    © 2026 GRID. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+
+let selectedTask = null;
+
+document.querySelectorAll(".delete-icon").forEach(icon => {
+
+    icon.addEventListener("click", function () {
+
+        selectedTask = this.closest(".task-row");
+
+    });
+
+});
+
+document.getElementById("confirmDeleteBtn")
+.addEventListener("click", function () {
+
+    if (selectedTask) {
+
+        selectedTask.remove();
+
+    }
+
+    const modalElement =
+        document.getElementById("deleteModal");
+
+    const modal =
+        bootstrap.Modal.getInstance(modalElement);
+
+    modal.hide();
+
+    document.body.classList.remove("modal-open");
+
+    document.body.style.overflow = "auto";
+
+    document.querySelectorAll(".modal-backdrop")
+        .forEach(backdrop => backdrop.remove());
+
+});
+
+</script>
+
+<div class="modal fade" id="createTaskModal" tabindex="-1">
+
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+
+        <div class="modal-content create-task-modal">
+
+            <div class="modal-body p-5">
+
+                <div class="d-flex align-items-center mb-4">
+
+                    <button type="button"
+                            class="btn text-primary fs-3 p-0 me-3"
+                            data-bs-dismiss="modal">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <h3 class="m-0 flex-grow-1 text-center">
+                        Create New Task
+                    </h3>
+
+                </div>
+
+                <label class="form-label">Task Title</label>
+
+                <input type="text"
+       id="taskTitle"
+       class="form-control custom-input">
+
+                <label class="form-label mt-4">Description</label>
+
+               <textarea id="taskDescription"
+          class="form-control custom-textarea"></textarea>
+
+                <div class="row mt-5">
+
+                    <div class="col-md-4">
+
+                        <label>Priority</label>
+
+                     <select id="taskPriority"
+        class="form-select custom-input">
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <label>Due Date</label>
+
+                        <input type="date"
+       id="taskDueDate"
+       class="form-control custom-input">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <label>Status</label>
+
+                        <select id="taskStatus"
+        class="form-select custom-input">
+                            <option>Pending</option>
+                            <option>Completed</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-5 d-flex gap-4">
+
+                    <button id="addTaskBtn"
+        class="btn action-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Task
+                    </button>
+
+                    <button class="btn action-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteModal">
+                        <i class="fa-regular fa-trash-can"></i>
+                        Delete Task
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content delete-modal">
+
+      <div class="modal-body text-center">
+
+        <i class="fa-regular fa-trash-can trash-icon"></i>
+
+        <h4>Delete Task?</h4>
+
+        <p>
+          Are you sure you<br>
+          want to delete this<br>
+          task?
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+
+          <button type="button" class="btn delete-btn">
+            Delete
+          </button>
+
+          <button type="button"
+                  class="btn cancel-btn"
+                  data-bs-dismiss="modal">
+            Cancel
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="mytask.js"></script>
+
+</body>
+</html>

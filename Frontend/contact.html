@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>contact</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<style>
+
+ .logo-img{
+    height:60px;
+    width:auto;
+}
+
+.button{padding-right: 50px;}
+
+.navbar-brand{padding-left:50px;}
+
+body{
+    
+    background:#f8f9fa;
+}
+
+.logo{
+    color:#3A86FF;
+}
+
+.nav-link{font-family: Futura Md BT;
+    font-weight:500;
+    font-size: 20px;
+    margin-left:20px;
+}
+
+.nav-link:hover{
+    color:#4DA3FF;
+}
+
+.navbar-nav .nav-item{
+    margin-right: 60px;
+}
+
+.contact-page{
+    width:90%;
+    margin:40px auto;
+}
+
+/* Banner */
+
+.contact-banner{
+    background-image: url(./Images/email.png);
+    background-size: cover;
+
+    border-radius:12px;
+    padding:30px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.banner-text p{
+    color:white;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.banner-text h1{
+    color:white;
+    font-size:60px;
+    line-height:1.1;
+    font-weight:700;
+}
+
+.banner-text span{
+    color:#3A86FF;
+}
+
+.banner-text h5{
+    color:white;
+    font-size:18px;
+    margin-top:15px;
+    font-weight:400;
+    max-width:500px;
+}
+
+.banner-icon i{
+    font-size:180px;
+    color:#4A8DFF;
+    text-shadow:
+        0 0 20px #4A8DFF,
+        0 0 40px #4A8DFF;
+}
+
+/* Heading */
+
+.contact-heading{
+    font-family: Futura Md BT;
+    text-align:center;
+    margin:60px 0;
+    font-size:48px;
+    color:#2A2D4F;
+}
+
+/* Form Card */
+
+.contact-form-card{
+    width:80%;
+    margin:auto;
+font-family: Futura Md BT;
+    background:linear-gradient(
+        180deg,
+        #3DCAC5,
+        #2A2D4F
+    );
+
+    border-radius:12px;
+    padding:40px;
+}
+
+.contact-form-card h3{
+    color:white;
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+.form-content{
+    display:flex;
+    gap:35px;
+}
+
+.left-form{
+    width:30%;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.right-form{
+    width:70%;
+}
+
+.input-box{
+    background:white;
+    border-radius:10px;
+    padding:18px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.input-box i{
+    color:#3A86FF;
+    font-size:24px;
+}
+
+.input-box input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:18px;
+}
+
+.message-box{
+    background:white;
+    border-radius:10px;
+    height:250px;
+    padding:20px;
+
+    display:flex;
+    gap:15px;
+}
+
+.message-box i{
+    color:#3A86FF;
+    font-size:24px;
+    margin-top:5px;
+}
+
+.message-box textarea{
+    width:100%;
+    height:100%;
+    border:none;
+    outline:none;
+    resize:none;
+    font-size:18px;
+}
+
+.send-btn{
+    width:120px;
+    height:55px;
+
+    border:none;
+    border-radius:10px;
+
+    background:white;
+    color:#2A2D4F;
+
+    font-size:18px;
+    font-weight:600;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    cursor:pointer;
+}
+
+.send-btn i{
+    color:#3A86FF;
+}
+
+.footer-section{
+    background-image: url(./Images/footer.png);
+    background-size: cover;
+    height: 250px;
+}
+
+.footer-section h5{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.footer-section ul li{
+    margin-bottom:10px;
+}
+
+.footer-section ul li a{
+    text-decoration:none;
+    color:#3A86FF;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.footer-section ul li a:hover{
+    color:white;
+}
+
+.res{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.pro{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.com{color: #f8f9fa;
+font-family: Futura BdCn BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.col-md-2{font-family: Futura Md BT;}
+
+.list-unstyled{font-family: Futura Md BT;}
+
+.follow-text{
+    color:#3A86FF;
+    margin-bottom:15px;
+}
+
+.col-md-3{text-align: left;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.col-md-3 h4{
+    margin-bottom:5px;
+}
+
+
+.col-md-3 p{
+    text-align: left;
+    margin:0;
+}
+
+.social-icons{
+    margin-bottom:40px;
+}
+
+.social-icons a{
+    color:#3A86FF;
+    font-size:28px;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.social-icons a:hover{
+    color:white;
+}
+
+.copyright{
+    color:#3A86FF;
+    font-size:18px;
+    margin-top:60px;
+}
+
+
+</style>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-white py-4">
+<div class="container-fluid p-0 d-flex align-items-center">
+
+<a class="navbar-brand" href="#">
+    <img src="./Images/GRID-Logo-07.png" alt="" class="logo-img">
+</a>
+
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="./index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./dashboard.html">Dashboard</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./features.html">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="./about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" style="color:#3A86FF;" href="./contact.html">Contact</a>
+</li>
+
+</ul>
+
+<div class="button">
+
+<a href="./signup.html" class="btn btn-outline-primary me-2">
+    Sign Up
+</a>
+
+<a href="./signup.html" class="btn btn-primary">
+    Log In
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<section class="contact-page">
+
+    <!-- Hero Banner -->
+    <div class="contact-banner">
+
+        <div class="banner-text">
+            <p style="font-family: Futura Md BT;">CONTACT US</p>
+
+            <h1 style="font-family: Futura BdCn BT;">
+                We're Here <br>
+                To <span>Help You</span>
+            </h1>
+
+            <h5 style="font-family: Futura Md BT;">
+                Everything you need to organize tasks,
+                track progress, and achieve your goals.
+            </h5>
+        </div>
+
+
+    </div>
+
+    <!-- Heading -->
+    <h2 class="contact-heading">
+        Have questions, feedback, or ideas? We'd love to hear from you.
+    </h2>
+
+    <!-- Contact Form -->
+    <div class="contact-form-card">
+
+        <h3>Send Us A Message</h3>
+
+        <div class="form-content">
+
+            <!-- Left Side -->
+            <div class="left-form">
+
+                <div class="input-box">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="Your Name">
+                </div>
+
+                <div class="input-box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Your Email">
+                </div>
+
+                <button class="send-btn">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    Send
+                </button>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="right-form">
+
+                <div class="message-box">
+                    <i class="fa-solid fa-pen"></i>
+                    <textarea placeholder="Your Message"></textarea>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-2">
+                <h5 class="pro">Product</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="com">Company</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="res">Resources</h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 text-end">
+
+                <h5 class="follow-text">Follow GRID</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+
+                    <a href="#"><i class="fas fa-globe"></i></a>
+
+                </div>
+
+                <p class="copyright">
+                    © 2026 GRID. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/task.js"></script>
+
+</body>
+</html>
